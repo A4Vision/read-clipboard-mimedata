@@ -16,8 +16,8 @@ class ClipboardReader(object):
         return [f for f in all_formats
                 if len(self._clipboard.mimeData().data(f))]
 
-    def get_format(self, formatName):
-        return self._clipboard.mimeData().data(formatName)
+    def get_format(self, format_name):
+        return self._clipboard.mimeData().data(format_name)
 
     def set_text(self, content):
         pyperclip.copy(content)
